@@ -111,6 +111,8 @@ public class ContactAdapter extends BaseAdapter {
                 Intent intent = new Intent(context, ContactInfo.class);
                 intent.putExtra("Name", contactList.get(position).getfName());
                 intent.putExtra("Phone", contactList.get(position).getPhone());
+                intent.putExtra("avtarURL", contactList.get(position).getAvtar());
+
 
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 context.startActivity(intent);
