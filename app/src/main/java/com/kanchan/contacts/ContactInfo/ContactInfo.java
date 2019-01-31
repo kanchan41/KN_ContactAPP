@@ -126,9 +126,9 @@ public class ContactInfo extends Activity {
                     Log.e("error", e.getMessage());
                 }
 
-                for (SmsSubmissionResponseMessage responseMessage : response.getMessages()) {
-                    System.out.println(responseMessage);
-                }
+//                for (SmsSubmissionResponseMessage responseMessage : response.getMessages()) {
+//                    System.out.println(responseMessage);
+//                }
 
 
             }
