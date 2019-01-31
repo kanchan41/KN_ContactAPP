@@ -4,7 +4,10 @@ package com.kanchan.contacts;
 import android.app.Activity;
 import android.app.AppComponentFactory;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
+import android.view.WindowManager;
 
 import com.google.android.material.tabs.TabLayout;
 import com.kanchan.contacts.Fragments.Contacts;
@@ -24,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        makeFullScreen(MainActivity.this);
         setContentView(R.layout.viewpagger);
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
@@ -75,6 +79,17 @@ public class MainActivity extends AppCompatActivity {
             }
             return String.valueOf(position);
         }
+    }
+
+    public static void makeFullScreen(Activity activity) {
+        activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED | WindowManager.LayoutParams.FLAG_FULLSCREEN |
+                WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);
+
+        int visibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
+        if (Build.VERSION.SDK_INT < 19) { //View.SYSTEM_UI_FLAG_IMMERSIVE is only on API 19+
+            visibility |= View.SYSTEM_UI_FLAG_IMMERSIVE;
+        }
+        activity.getWindow().getDecorView().setSystemUiVisibility(visibility);
     }
 
 

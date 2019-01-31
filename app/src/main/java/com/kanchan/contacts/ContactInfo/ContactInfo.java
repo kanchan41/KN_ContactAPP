@@ -2,6 +2,7 @@ package com.kanchan.contacts.ContactInfo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -27,7 +28,7 @@ import com.squareup.picasso.Target;
 import java.io.IOException;
 import java.util.Random;
 
-public class ContactInfo extends AppCompatActivity {
+public class ContactInfo extends Activity {
 
     TextView Name, phone;
     Button sendSms;
