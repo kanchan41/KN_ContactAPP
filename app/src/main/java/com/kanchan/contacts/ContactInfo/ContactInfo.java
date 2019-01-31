@@ -78,7 +78,9 @@ public class ContactInfo extends Activity {
                 .into(target);
 
 
-        HttpConfig httpConfig = HttpConfig.defaultConfig();
+        HttpConfig httpConfig = new HttpConfig.Builder().baseUri("https://api.nexmo.com").build();
+
+//        HttpConfig httpConfig = HttpConfig.defaultConfig();
 
         NexmoClient client = new NexmoClient.Builder()
                 .apiKey("f96a7847")
@@ -124,9 +126,9 @@ public class ContactInfo extends Activity {
                     Log.e("error", e.getMessage());
                 }
 
-//                for (SmsSubmissionResponseMessage responseMessage : response.getMessages()) {
-//                    System.out.println(responseMessage);
-//                }
+                for (SmsSubmissionResponseMessage responseMessage : response.getMessages()) {
+                    System.out.println(responseMessage);
+                }
 
 
             }
