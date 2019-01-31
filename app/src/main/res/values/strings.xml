@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Contacts</string>
+    <string name="NoDataInProgress">Oops! No InProgress Bookings Currently</string>
+    <string name="NoDataInPateintFootFall">Oops! No Bookings Currently</string>
+    <string name="NoDataCancelled">Yeay! No Cancelled Bookings Currently</string>
+    <string name="NetworkError">Network Error!, Please Check Your Internet Connection</string>
+    <string name="ServerError">Server Error Occured!, Please Try Again</string>
+    <string name="NoConnection">No Connection Found!, Please Try Again</string>
+    <string name="pleasewait">Please wait!</string>
+</resources>

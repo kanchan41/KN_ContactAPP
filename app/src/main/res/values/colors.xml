@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#46465a</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="navheader">#46465a</color>
+    <color name="tabsitem">#4aada8</color>
+
+    <color name="cgrey">#D3D3D3</color>
+    <color name="transparent">#80000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="lightwhite">#f1f1f1</color>
+</resources>
